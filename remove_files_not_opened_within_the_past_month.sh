@@ -3,8 +3,8 @@
 # Store the current date in a variable
 current_date=$(date +%s)
 
-# Loop through all files in the specified directory
-for file in $1/*; do
+# Loop through all files in the specified directory and its subdirectories
+for file in $1/**/*; do
   # Check if the file is a regular file (not a directory or special file)
   if [ -f "$file" ]; then
     # Get the last accessed date of the file
